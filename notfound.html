@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pencarian Universitas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #searchInput {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .result-item {
+      background: #fff;
+      padding: 10px;
+      margin: 10px auto;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #notFoundMessage {
+      display: none;
+      margin-top: 20px;
+      color: #666;
+    }
+
+    #notFoundMessage img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    #notFoundMessage span {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    #notFoundMessage small {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Cari Universitas</h2>
+  <input type="text" id="searchInput" placeholder="Masukkan nama universitas..." />
+
+  <div id="results"></div>
+
+  <div id="notFoundMessage">
+    <img src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png" alt="Not found" />
+    <span>Oops! Tidak ditemukan</span>
+    <small>Tidak ada hasil untuk: "<b id='keyword'></b>"</small>
+  </div>
+
+  <script>
+    const universities = [
+      "Universitas Indonesia",
+      "Universitas Gadjah Mada",
+      "Institut Teknologi Bandung",
+      "Universitas Diponegoro",
+      "Universitas Riau"
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const resultsContainer = document.getElementById("results");
+    const notFoundMessage = document.getElementById("notFoundMessage");
+    const keywordSpan = document.getElementById("keyword");
+
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      resultsContainer.innerHTML = "";
+      notFoundMessage.style.display = "none";
+
+      const filtered = universities.filter(u =>
+        u.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0 && query !== "") {
+        keywordSpan.textContent = query;
+        notFoundMessage.style.display = "block";
+      } else {
+        filtered.forEach(u => {
+          const div = document.createElement("div");
+          div.className = "result-item";
+          div.textContent = u;
+          resultsContainer.appendChild(div);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

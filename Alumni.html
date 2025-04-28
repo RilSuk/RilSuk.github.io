@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Generic - Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+		<style>
+			.photo {
+				width: 100%;
+				height: 130px;
+				object-fit: contain; /* GANTI dari 'cover' menjadi 'contain' */
+				border-radius: 8px;
+				margin-bottom: 8px;
+				background-color: #f0f0f0; /* opsional, supaya ada latar belakang kalau foto kecil */
+			}
+			ul.pagination {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-top: 20px;
+				gap: 5px;
+				list-style: none;
+				padding: 0;
+			}
+			ul.pagination li {
+				display: inline-block;
+			}
+			ul.pagination .button, ul.pagination .page {
+				padding: 6px 12px;
+				background: #f0f0f0;
+				border-radius: 4px;
+				text-decoration: none;
+				color: #333;
+				cursor: pointer;
+			}
+			ul.pagination .active {
+				background: #007bff;
+				color: #fff;
+			}
+			ul.pagination .disabled {
+				background: #ddd;
+				color: #999;
+				cursor: not-allowed;
+			}
+		</style>
+	</head>
+	<div class="custom-overlay fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 hidden"></div>
+	<body class="is-preload bg-gray-100">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					                <!-- Kotak Search Bar + Tombol Filter (Sticky) -->
+                <div class="sticky top-0 z-50 bg-gray-100 py-4 shadow-md">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+						<button class="back-button" onclick="goBack()">
+							<span class="back-arrow">Back</span>
+						  </button>
+						
+						  <script>
+							function goBack() {
+							  window.history.back();
+							}
+						  </script>
+                        <div class="relative w-full">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Cari 
+								..." 
+                                class="p-3 border rounded w-full shadow"
+                                onkeydown="handleSearchKey(event)"
+                                onclick="onSearchFocus()"
+                            />
+                            <!-- Dropdown Saran -->
+                            <ul id="suggestions" class="univ-suggestions hidden"></ul>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                        
+                            <!-- Menu Button -->
+                            <button 
+                                id="menuBtn" 
+                                onclick="toggleMenuDropdown()" 
+                                class="border border-red-400 text-red-500 px-4 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-red-100 text-sm sm:text-base"
+                            >
+                                Menu
+                            </button>
+                        
+                            <!-- Menu Dropdown -->
+                            <ul 
+                                id="menuDropdown" 
+                                class="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md hidden z-50"
+                            >
+                            <li>
+                                <a href="index.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-home mr-2"></i>Home
+                                </a>
+                              </li>
+                              <li>
+                                <a href="list.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-university mr-2"></i>Kampus
+                                </a>
+                              </li>
+                              <li>
+                                <a href="alumni.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-user-graduate mr-2"></i>Alumni
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                                              
+                    </div>
+                </div>
+
+					
+
+					<!-- Daftar Kartu -->
+					<section>
+						<div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="cardContainer">
+							<!-- Kartu akan ditampilkan di sini lewat JavaScript -->
+						</div>
+
+						<!-- Pagination -->
+						<ul class="pagination" id="pagination">
+							<!-- Pagination akan muncul lewat JavaScript -->
+						</ul>
+					</section>
+
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/pagination.js"></script>
+		<script src="assets/js/search.js"></script>
+		<script src="assets/js/universitymain.js"></script>
+		<script src="assets/js/filters.js"></script>
+		<script src="assets/js/menu.js"></script>
+		<script src="alumni.js"></script>
+		
+
+		<!-- Script untuk Kartu dan Pagination -->
+		
+		
+
+	</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Daftar Universitas - Editorial by HTML5 UP</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<div class="custom-overlay fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 hidden"></div>
+<body class="is-preload bg-gray-100">
+
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Kotak Search Bar + Tombol Filter (Sticky) -->
+                <div class="sticky top-0 z-50 bg-gray-100 py-4 shadow-md">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+                        <button class="back-button" onclick="goBack()">
+							<span class="back-arrow">Back</span>
+						  </button>
+						
+						  <script>
+							function goBack() {
+							  window.history.back();
+							}
+						  </script>
+                        <div class="relative w-full">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Cari Universitas..." 
+                                class="p-3 border rounded w-full shadow"
+                                onkeydown="handleSearchKey(event)"
+                                onclick="onSearchFocus()"
+                            />
+                            <!-- Dropdown Saran -->
+                            <ul id="suggestions" class="univ-suggestions hidden"></ul>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                            <!-- Filter Button -->
+                            <button 
+                                id="filterBtn" 
+                                onclick="toggleFilter()" 
+                                class="border border-red-400 text-red-500 px-4 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-red-100 text-sm sm:text-base"
+                            >
+                                Filter
+                            </button>
+                        
+                            <!-- Menu Button -->
+                            <button 
+                                id="menuBtn" 
+                                onclick="toggleMenuDropdown()" 
+                                class="border border-red-400 text-red-500 px-4 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-red-100 text-sm sm:text-base"
+                            >
+                                Menu
+                            </button>
+                        
+                            <!-- Menu Dropdown -->
+                            <ul 
+                                id="menuDropdown" 
+                                class="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md hidden z-50"
+                            >
+                            <li>
+                                <a href="index.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-home mr-2"></i>Home
+                                </a>
+                              </li>
+                              <li>
+                                <a href="list.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-university mr-2"></i>Kampus
+                                </a>
+                              </li>
+                              <li>
+                                <a href="alumni.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+                                  <i class="fas fa-user-graduate mr-2"></i>Alumni
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                                              
+                    </div>
+                </div>
+
+                <!-- Filter Panel -->
+                <div id="filterPanel" class="filter-panel hidden">
+                    <div class="filter-section">
+                        <label>Urutan:</label>
+                        <input type="checkbox" id="sortAZ"><label for="sortAZ">A-Z</label>
+                        <input type="checkbox" id="sortZA"><label for="sortZA">Z-A</label>
+                    </div>
+
+                                        <!-- Akreditasi -->
+                    <div class="filter-section">
+                        <label>Akreditasi:</label>
+                        <input type="checkbox" class="akreditasi" id="akreditasiA" value="A"><label for="akreditasiA">A</label>
+                        <input type="checkbox" class="akreditasi" id="akreditasiB" value="B"><label for="akreditasiB">B</label>
+                        <input type="checkbox" class="akreditasi" id="akreditasiC" value="C"><label for="akreditasiC">C</label>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <label>Jenis Kampus:</label>
+                        <input type="checkbox" id="swasta" value="Swasta"><label for="swasta">Swasta</label>
+                        <input type="checkbox" id="negeri" value="Negeri"><label for="negeri">Negeri</label>
+                    </div>
+
+                    <div class="filter-section">
+                        <label>Pulau:</label>
+                        <input type="checkbox" class="pulau" id="sumatra" value="Sumatra"><label for="sumatra">Sumatra</label>
+                        <input type="checkbox" class="pulau" id="jawa" value="Jawa"><label for="jawa">Jawa</label>
+                        <input type="checkbox" class="pulau" id="sulawesi" value="Sulawesi"><label for="sulawesi">Sulawesi</label>
+                        <input type="checkbox" class="pulau" id="kalimantan" value="Kalimantan"><label for="kalimantan">Kalimantan</label>
+                        <input type="checkbox" class="pulau" id="papua" value="Papua"><label for="papua">Papua</label>
+                    </div>
+
+                    <button id="applyFilterBtn" onclick="applyFilters()">Terapkan</button>
+                    <button id="cancelFilterBtn" onclick="cancelFilters()">Cancel</button>
+                </div>
+
+                <!-- Grid Universitas -->
+                <div id="universityGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+                    <!-- Konten akan dimasukkan lewat JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-6 text-center">
+                    <ul class="pagination inline-flex flex-wrap justify-center gap-2"></ul>
+                </div>
+                
+            </div>
+        </div>
+        
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/universitylist.js"></script>
+    <script src="assets/js/pagination.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/display.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/universitymain.js"></script>
+</body>
+</html>

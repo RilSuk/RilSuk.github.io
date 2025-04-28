@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Maukuliah | Temukan Informasi Tentang Kampus</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/js/textsearchbar.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+			  corePlugins: {
+				preflight: false,
+			  }
+			}
+		  </script>
+		<link
+	  rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	</head>
+	<div class="custom-overlay fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 hidden"></div>
+	<body class="is-preload bg-gray-100">
+
+		                <!-- Kotak Search Bar + Tombol Filter (Sticky) -->
+						<div class="sticky top-0 z-50 bg-gray-100 py-4 shadow-md">
+							<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+								<div class="relative w-full">
+									<input 
+										type="text" 
+										id="searchInput" 
+										placeholder="Cari Universitas..." 
+										class="p-3 border rounded w-full shadow"
+										onkeydown="handleSearchKey(event)"
+										onclick="onSearchFocus()"
+									/>
+									<!-- Dropdown Saran -->
+									<ul id="suggestions" class="univ-suggestions hidden"></ul>
+								</div>
+		
+								<div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+									<!-- Menu Button -->
+									<button 
+										id="menuBtn" 
+										onclick="toggleMenuDropdown()" 
+										class="border border-red-400 text-red-500 px-4 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-red-100 text-sm sm:text-base"
+									>
+										Menu
+									</button>
+								
+									<!-- Menu Dropdown -->
+									<ul 
+										id="menuDropdown" 
+										class="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md hidden z-50"
+									>
+									<li>
+										<a href="index.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+										  <i class="fas fa-home mr-2"></i>Home
+										</a>
+									  </li>
+									  <li>
+										<a href="list.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+										  <i class="fas fa-university mr-2"></i>Kampus
+										</a>
+									  </li>
+									  <li>
+										<a href="alumni.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg">
+										  <i class="fas fa-user-graduate mr-2"></i>Alumni
+										</a>
+									  </li>
+									</ul>
+								</div>
+													  
+							</div>
+						</div>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Temukan Kampus Impian Anda!<br />
+											</h1>
+											<p>Jelajahi lokasi kampus terbaik di Website interaktif kami.</p>
+										</header>
+										Cari kampus berdasarkan lokasi, jurusan, atau prestasi alumni dari sekolahmu.
+										Kenali setiap kampus lebih dalam lewat biodata lengkap: program studi, fasilitas, dan akreditasi.
+										Wujudkan perjalanan akademikmu menuju masa depan yang gemilang bersama kami!
+									</div>
+									<span class="image object">
+										<img src="images/Paper-map-cuate.png" alt="" style="width: 400px;" />
+									</span>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<div style="text-align: left;">
+											<h2>Rekomendasi Kampus</h2>
+										</div>
+									</header>
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UI_image.jpg" alt="Kampus UI">
+												<h3>Universitas Indonesia</h3>
+												<p>Universitas Indonesia di Depok adalah pusat riset nasional, menawarkan berbagai program unggulan di banyak bidang.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UGM_image.jpg" alt="Kampus UGM">
+												<h3>Universitas Gadjah Mada</h3>
+												<p>UGM Yogyakarta adalah universitas nasional tertua, berperan penting dalam pendidikan dan pengabdian masyarakat Indonesia.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/ITB_image.jpg" alt="Kampus ITB">
+												<h3>Institut Teknologi Bandung</h3>
+												<p>ITB di Bandung terkenal dengan kekuatan di bidang teknik, sains, arsitektur, dan inovasi teknologi.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNAIR_image.jpg" alt="Kampus Unair">
+												<h3>Universitas Airlangga</h3>
+												<p>Universitas Airlangga di Surabaya unggul dalam bidang kesehatan, hukum, dan pengembangan ilmu sosial.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/IPB_image.jpg" alt="Kampus IPB">
+												<h3>Institut Pertanian Bogor</h3>
+												<p>IPB di Bogor adalah pusat pendidikan pertanian, lingkungan, dan biosains terkemuka di Indonesia.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/ITS_image.jpg" alt="Kampus ITS">
+												<h3>Institut Teknologi Sepuluh Nopember</h3>
+												<p>ITS Surabaya berfokus pada pengembangan teknologi, teknik, dan kelautan dengan inovasi berkelanjutan.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNPAD_image.jpg" alt="Kampus Unpad">
+												<h3>Universitas Padjadjaran</h3>
+												<p>Universitas Padjadjaran di Jatinangor kuat di bidang hukum, kesehatan masyarakat, dan komunikasi.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNDIP_image.jpg" alt="Kampus Undip">
+												<h3>Universitas Diponegoro</h3>
+												<p>Undip Semarang adalah universitas riset terdepan dengan fokus pada teknologi, hukum, dan kesehatan.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UB_image.jpg" alt="Kampus UB">
+												<h3>Universitas Brawijaya</h3>
+												<p>Universitas Brawijaya di Malang unggul dalam bidang ekonomi, pertanian, dan teknik, dengan jaringan riset luas.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/BINUS_image.jpg" alt="Kampus Binus">
+												<h3>Binus University</h3>
+												<p>Binus University di Jakarta adalah kampus swasta terkemuka, unggul di bidang IT, bisnis, dan desain.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/TELKOM_image.jpg" alt="Kampus Telkom">
+												<h3>Telkom University</h3>
+												<p>Telkom University di Bandung mengutamakan inovasi digital, teknologi informasi, dan bisnis kreatif.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNHAS_image.jpg" alt="Kampus Unhas">
+												<h3>Universitas Hasanuddin</h3>
+												<p>Universitas Hasanuddin Makassar adalah pusat keunggulan di bidang kelautan, pertanian, dan kesehatan.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNS_image.jpg" alt="Kampus UNS">
+												<h3>Universitas Sebelas Maret</h3>
+												<p>UNS Solo berkembang pesat dengan program studi unggulan yang berorientasi pada karakter dan profesionalisme.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/ATMAJAYA_image.jpg" alt="Kampus Atma Jaya">
+												<h3>Universitas Katolik Atma Jaya</h3>
+												<p>Atma Jaya Jakarta menawarkan pendidikan unggulan di bidang psikologi, bisnis, dan komunikasi berbasis nilai humanis.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UII_image.jpg" alt="Kampus UII">
+												<h3>Universitas Islam Indonesia</h3>
+												<p>UII Yogyakarta mengedepankan pendidikan berbasis nilai Islam dengan berbagai program unggulan nasional.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UMY_image.jpg" alt="Kampus UMY">
+												<h3>Universitas Muhammadiyah Yogyakarta</h3>
+												<p>UMY adalah universitas berbasis nilai Islam modern dengan program studi bertaraf internasional di berbagai bidang.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UPI_image.jpg" alt="Kampus UPI">
+												<h3>Universitas Pendidikan Indonesia</h3>
+												<p>UPI Bandung dikenal sebagai pencetak tenaga pendidik profesional di bidang pendidikan dasar hingga tinggi.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/USU_image.jpg" alt="Kampus USU">
+												<h3>Universitas Sumatera Utara</h3>
+												<p>USU di Medan adalah pusat pendidikan terbesar di Sumatera, berkontribusi dalam bidang kesehatan, hukum, dan teknik.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNY_image.jpg" alt="Kampus UNY">
+												<h3>Universitas Negeri Yogyakarta</h3>
+												<p>UNY Yogyakarta fokus pada pengembangan pendidikan, olahraga, dan sains terapan dengan reputasi nasional.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UM_image.jpg" alt="Kampus UM">
+												<h3>Universitas Negeri Malang</h3>
+												<p>UM di Malang dikenal sebagai kampus pendidikan terdepan dengan kekuatan di bidang keguruan dan teknologi pendidikan.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UDAYANA_image.jpg" alt="Kampus Udayana">
+												<h3>Universitas Udayana</h3>
+												<p>Universitas Udayana di Bali menawarkan pendidikan unggulan di bidang pariwisata, budaya, dan kesehatan masyarakat.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/ANDALAS_image.jpg" alt="Kampus Andalas">
+												<h3>Universitas Andalas</h3>
+												<p>Universitas Andalas di Padang merupakan universitas tertua di luar Jawa, unggul di bidang pertanian dan kesehatan.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UKP_image.jpg" alt="Kampus Petra">
+												<h3>Universitas Kristen Petra</h3>
+												<p>Universitas Kristen Petra Surabaya unggul dalam bidang arsitektur, desain, dan bisnis, berlandaskan nilai Kristiani.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UMS_image.jpg" alt="Kampus UMS">
+												<h3>Universitas Muhammadiyah Surakarta</h3>
+												<p>UMS di Solo adalah universitas berbasis Islam terkemuka, menawarkan program studi berdaya saing tinggi nasional dan internasional.</p>
+											</div>
+											<div class="swiper-slide" onclick="goToPage('page8.html')">
+												<img src="images/foto/UNILA_image.jpg" alt="Kampus Unila">
+												<h3>Universitas Lampung</h3>
+												<p>Universitas Lampung adalah pusat pendidikan utama di Provinsi Lampung, berkembang pesat di bidang pertanian, pendidikan, dan teknologi.</p>
+											</div>											
+										</div>
+								
+										<!-- Tombol Navigasi -->
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-button-next"></div>
+									</div>
+								</section>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Mengapa Memilih Kami?</h2>
+								</header>
+								<div class="features">
+									<article>
+										<img src="images/High-School-bro.png" alt="Daftar Universitas" style="width: 100px; height: auto;">
+										<div class="content">
+											<h3>Daftar Universitas di Seluruh Indonesia</h3>
+											<p>Maukuliah.org menyediakan daftar lengkap universitas di Indonesia, membantu kamu mencari kampus yang sesuai dengan lokasi dan program studi yang diinginkan.</p>
+										</div>
+									</article>
+									<article>
+										<img src="images/Site-Stats-rafiki.png" alt="Biodata Universitas" style="width: 100px; height: auto;">
+										<div class="content">
+											<h3>Biodata Universitas yang Terperinci</h3>
+											<p>Setiap universitas memiliki halaman biodata yang berisi informasi lengkap, mulai dari sejarah, fasilitas, hingga akreditasi, sehingga kamu bisa membuat pilihan yang lebih tepat.</p>
+										</div>
+									</article>
+									<article>
+										<img src="images/Job-hunt-pana.png" alt="Cerita Alumni" style="width: 100px; height: auto;">
+										<div class="content">
+											<h3>Inspirasi Karier dari Alumni Universitas</h3>
+											<p>Melihat foto alumni yang sukses di berbagai bidang dapat memberikan gambaran tentang kehidupan kampus dan peluang yang bisa kamu raih setelah kuliah.</p>
+										</div>
+									</article>
+									<article>
+										<img src="images/Visual-data-pana.png" alt="Cerita Alumni" style="width: 100px; height: auto;">
+										<div class="content">
+											<h3>Kemudahan Akses Informasi</h3>
+											<p>Dengan navigasi yang sederhana dan terstruktur, Maukuliah.org memungkinkan kamu untuk dengan mudah menemukan informasi penting tentang universitas-universitas di Indonesia.</p>
+										</div>
+									</article>
+								</div>
+							</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<div style="text-align: left;">
+											<h2>Ipsum sed dolor</h2>
+										</div>
+									</header>
+									<div class="posts">
+										<article>
+											<div class="flex justify-center">
+												<a href="#" class="block">
+												  <img src="images/A6/azizah.jpg" alt="" class="w-36 h-auto rounded-lg" />
+												</a>
+											  </div>
+											  
+											<h3>Azizah Fauzi</h3>
+											<p>Azizah Fauzi merupakan mahasiswi Institut Pertanian Bogor (IPB University) yang diterima melalui jalur SBMPTN. Ia memilih Program Studi Arsitektur Lanskap di bawah Fakultas Pertanian karena ketertarikannya pada desain ruang terbuka hijau dan perencanaan kota yang berkelanjutan. Berasal dari SMAIT AL-ITTIHAD, Azizah Fauzi terus mengembangkan minatnya dalam bidang lanskap melalui berbagai kegiatan akademik dan proyek kreatif. Dengan semangat dan dedikasi, ia bercita-cita menciptakan lingkungan yang lebih hijau dan harmonis untuk generasi mendatang.</p>
+										</article>
+										<article>
+											<div class="flex justify-center">
+												<a href="#" class="block">
+												  <img src="images/A9/Amelia Oktavianda IMG_8247.JPG" alt="" class="w-36 h-auto rounded-lg" />
+												</a>
+											  </div>											  
+											<h3>Nulla amet dolore</h3>
+											<p>Amelia Oktavianda adalah mahasiswi Universitas Sumatera Utara (USU) yang diterima melalui jalur Mandiri. Ia menempuh pendidikan di Program Studi Psikologi, dengan semangat besar untuk memahami perilaku manusia dan membantu meningkatkan kualitas kesehatan mental di masyarakat. Dengan tekad dan ketekunan, Amelia berkomitmen untuk mengembangkan diri melalui berbagai kegiatan akademik dan organisasi selama masa kuliahnya.</p>
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+					</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+			<script src="assets/js/map.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+			<script src="assets/js/kotak.js"></script>
+			<script src="assets/js/pagination.js"></script>
+			<script src="assets/js/search.js"></script>
+			<script src="assets/js/universitymain.js"></script>
+			<script src="assets/js/filters.js"></script>
+			<script src="assets/js/menu.js"></script>
+			<script src="assets/js/rekomuniv.js"></script>
+	
+
+
+	</body>
+</html>
