@@ -84,7 +84,7 @@ function displayUniversities(list) {
     `;
         div.onclick = () => {
             const universityName = university.name.replace(/\s+/g, '_');
-            const url = `assets/universitas/${universityName}.html`;
+            const url = `${universityName}.html`;
             window.location.href = url;
         };
         grid.appendChild(div);
@@ -170,7 +170,7 @@ function showSuggestions(keyword) {
     `;
         li.onclick = () => {
             const universityName = univ.name.replace(/\s+/g, '_');
-            const url = `assets/universitas/${universityName}.html`;
+            const url = `${universityName}.html`;
             window.location.href = url;
         };
         suggestions.appendChild(li);
