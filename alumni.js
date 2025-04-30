@@ -1,4 +1,4 @@
-		const cardsPerPage = 8;
+		const cardsPerPage = 20;
 		let currentPage = 1;
 		
 		// Data kartu
@@ -69,14 +69,14 @@
 				},
 				//angkatan 7
 				{
-					foto: "images/A7/Rani.jpg",
+					foto: "images/A7/rani.jpg",
 					jurusan: "FARMASI",
 					kampus: "UIN JAKARTA",
 					nama: "Rani Aulia Yuda",
 					jalurMasuk: "PTN"
 				},
 				{
-					foto: "images/A7/NUR.jpg",
+					foto: "images/A7/nur.jpg",
 					jurusan: "D3 AKUNTANSI",
 					kampus: "UNRI",
 					nama: "Nur Izzatil Islam",
@@ -97,14 +97,14 @@
 					jalurMasuk: "JPA 1"
 				},
 				{
-					foto: "images/A7/Aurellia.jpg",
+					foto: "images/A7/aurellia.jpg",
 					jurusan: "D3 OKUPASI TERAPI",
 					kampus: "UI",
 					nama: "Aurellia Novanda Rahmadanty",
 					jalurMasuk: "SIMAK UI"
 				},
 				{
-					foto: "images/A7/Syahirah.jpg",
+					foto: "images/A7/syahirah.jpg",
 					jurusan: "AKUNTANSI",
 					kampus: "UNRI",
 					nama: "Syahirah Ulya Fidran",
