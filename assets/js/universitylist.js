@@ -1,4 +1,27 @@
 const universities = [
+    { name: "Universitas Indonesia (UI)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UI_image.jpg", logoimage: "images/logo/UI_logo.png", description: "Universitas Indonesia adalah salah satu universitas terbaik dan tertua di Indonesia, berlokasi di Depok, Jawa Barat." },
+    { name: "Universitas Gadjah Mada (UGM)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UGM_image.jpg", logoimage: "images/logo/UGM_logo.png", description: "UGM Yogyakarta merupakan universitas negeri ternama yang unggul dalam berbagai bidang pendidikan, penelitian, dan pengabdian." },
+    { name: "Institut Teknologi Bandung (ITB)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/ITB_image.jpg", logoimage: "images/logo/ITB_logo.png", description: "ITB adalah institut teknologi negeri di Bandung yang dikenal dengan keunggulan di bidang teknik dan sains." },
+    { name: "Universitas Airlangga (UNAIR)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UNAIR_image.jpg", logoimage: "images/logo/UNAIR_logo.png", description: "UNAIR Surabaya adalah salah satu universitas negeri terbaik dengan fokus pada kesehatan, sains, dan sosial humaniora." },
+    { name: "Institut Teknologi Sepuluh Nopember (ITS)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/ITS_image.jpg", logoimage: "images/logo/ITS_logo.png", description: "ITS Surabaya merupakan perguruan tinggi teknologi terkemuka di Indonesia dengan keunggulan dalam riset dan inovasi." },
+    { name: "Universitas Padjadjaran (UNPAD)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UNPAD_image.jpg", logoimage: "images/logo/UNPAD_logo.png", description: "UNPAD Bandung adalah universitas negeri unggulan yang memiliki beragam program studi lintas disiplin." },
+    { name: "Universitas Diponegoro (UNDIP)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UNDIP_image.jpg", logoimage: "images/logo/UNDIP_logo.png", description: "UNDIP Semarang merupakan salah satu universitas negeri terbaik dengan kekuatan di bidang teknik dan sosial." },
+    { name: "Universitas Brawijaya (UB)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UB_image.jpg", logoimage: "images/logo/UB_logo.png", description: "UB Malang adalah universitas negeri dengan reputasi nasional di bidang pertanian, ekonomi, dan ilmu sosial." },
+    { name: "BINUS University (BINUS)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/BINUS_image.jpg", logoimage: "images/logo/BINUS_logo.png", description: "BINUS Jakarta adalah universitas swasta unggulan yang dikenal dengan kekuatan di bidang teknologi dan bisnis." },
+    { name: "Telkom University (Tel-U)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/TELKOM_image.jpg", logoimage: "images/logo/TELKOM_logo.png", description: "Telkom University adalah perguruan tinggi swasta di Bandung yang berfokus pada teknologi dan komunikasi." },
+    { name: "Universitas Hasanuddin (UNHAS)", category: "Negeri", island: "Sulawesi", accreditation:"A", image: "images/foto/UNHAS_image.jpg", logoimage: "images/logo/UNHAS_logo.png", description: "UNHAS Makassar adalah universitas negeri terbesar di Indonesia timur dengan berbagai program studi unggulan." },
+    { name: "Universitas Sebelas Maret (UNS)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UNS_image.jpg", logoimage: "images/logo/UNS_logo.png", description: "UNS Surakarta adalah universitas negeri yang berkembang pesat dan memiliki keunggulan dalam riset dan inovasi." },
+    { name: "Universitas Islam Indonesia (UII)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/UII_image.jpg", logoimage: "images/logo/UII_logo.png", description: "UII Yogyakarta merupakan universitas swasta Islam terkemuka yang mengintegrasikan ilmu dan nilai keislaman." },
+    { name: "Universitas Muhammadiyah Yogyakarta (UMY)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/UMY_image.jpg", logoimage: "images/logo/UMG_logo.png", description: "UMY adalah universitas swasta berbasis Muhammadiyah di Yogyakarta dengan program studi berstandar internasional." },
+    { name: "Universitas Pendidikan Indonesia (UPI)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UPI_image.jpg", logoimage: "images/logo/UPI_logo.png", description: "UPI Bandung adalah universitas negeri yang fokus pada pendidikan dan keguruan dengan program studi yang beragam." },
+    { name: "Universitas Sumatera Utara (USU)", category: "Negeri", island: "Sumatra", accreditation:"A", image: "images/foto/USU_image.jpg", logoimage: "images/logo/USU_logo.png", description: "USU Medan adalah universitas negeri terbesar di Sumatra Utara dengan berbagai fakultas unggulan." },
+    { name: "Universitas Negeri Yogyakarta (UNY)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UNY_image.jpg", logoimage: "images/logo/UNY_logo.png", description: "UNY adalah universitas negeri di Yogyakarta yang terkenal di bidang pendidikan dan pengembangan sumber daya manusia." },
+    { name: "Universitas Negeri Malang (UM)", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/UM_image.jpg", logoimage: "images/logo/UM_logo.png", description: "Universitas Negeri Malang adalah kampus negeri dengan kekuatan di bidang pendidikan, sastra, dan teknologi pendidikan." },
+    { name: "Universitas Udayana (UNUD)", category: "Negeri", island: "Bali", accreditation:"A", image: "images/foto/UNUD_image.jpg", logoimage: "images/logo/UNUD_logo.png", description: "UNUD Bali adalah universitas negeri yang terkenal di kawasan timur Indonesia dengan program studi beragam." },
+    { name: "Universitas Andalas (UNAND)", category: "Negeri", island: "Sumatra", accreditation:"A", image: "images/foto/UNAND_image.jpg", logoimage: "images/logo/UNAND_logo.png", description: "UNAND Padang merupakan universitas negeri tertua di luar Jawa yang memiliki reputasi baik secara nasional." },
+    { name: "Universitas Muhammadiyah Surakarta (UMS)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/UMS_image.jpg", logoimage: "images/logo/UMS_logo.png", description: "UMS adalah universitas Muhammadiyah terkemuka di Surakarta yang memiliki banyak program studi unggulan." },
+    { name: "Universitas Lampung (UNILA)", category: "Negeri", island: "Sumatra", accreditation:"A", image: "images/foto/UNILA_image.jpg", logoimage: "images/logo/UNILA_logo.png", description: "UNILA adalah universitas negeri di Bandar Lampung yang aktif dalam pengembangan sumber daya manusia dan riset." },
+    
     { name: "Institut Ilmu Al-Qur'an", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/iiq_image.jpg", logoimage: "images/logo/iiq_logo.jpg", description: "Institut Ilmu Al-Qur'an merupakan perguruan tinggi swasta yang berfokus pada pendidikan Al-Qur'an dan studi Islam di Tangerang Selatan." },
     { name: "Sekolah Tinggi Agama Islam Imam Asy-Syafii (STAI-IMSYA)", category: "Swasta", island: "Sumatra", image: "images/foto/stai_image.jpg", logoimage: "images/logo/stai_logo.jpg", description: "STAI Imam Asy-Syafii Pekanbaru adalah institusi pendidikan tinggi Islam yang menawarkan berbagai program studi keagamaan di Riau." },
     { name: "Politeknik Negeri Batam (Polibatam)", category: "Negeri", island: "Sumatra", image: "images/foto/Polibatam_image.jpg", logoimage: "images/logo/Polibatam_logo.jpg", description: "Polibatam adalah politeknik negeri yang terletak di Batam, menawarkan pendidikan vokasi yang fokus pada industri dan teknologi." },
@@ -32,6 +55,7 @@ const universities = [
     { name: "Universitas Gunadarma (UG)", category: "Swasta", island: "Jawa", accreditation:"A", image: "images/foto/ug_image.jpg", logoimage: "images/logo/ug_logo.jpg", description: "Universitas Gunadarma adalah kampus swasta besar di Depok yang unggul dalam bidang teknologi dan informatika." },
     { name: "Universitas Baiturrahmah (Unbrah)", category: "Swasta", island: "Sumatra", accreditation:"B", image: "images/foto/unbrah_image.jpg", logoimage: "images/logo/unbrah_logo.jpg", description: "Unbrah Padang merupakan perguruan tinggi swasta yang dikenal dengan program-program di bidang kesehatan dan ilmu sosial." },
     { name: "Politeknik Pariwisata NHI Bandung", category: "Negeri", island: "Jawa", accreditation:"A", image: "images/foto/poltekparnhi_image.jpg", logoimage: "images/logo/poltekparnhi_logo.jpg", description: "Poltekpar NHI Bandung adalah institusi negeri terkemuka di Indonesia yang berfokus pada pendidikan tinggi pariwisata." },
+
 ];
 
 
@@ -61,7 +85,7 @@ function displayUniversities(list) {
     `;
         div.onclick = () => {
             const universityName = university.name.replace(/\s+/g, '_');
-            const url = `assets/universitas/${universityName}.html`;
+            const url = `${universityName}.html`;
             window.location.href = url;
         };
         grid.appendChild(div);
@@ -218,7 +242,7 @@ function showSuggestions(keyword) {
     `;
         li.onclick = () => {
             const universityName = univ.name.replace(/\s+/g, '_');
-            const url = `assets/universitas/${universityName}.html`;
+            const url = `${universityName}.html`;
             window.location.href = url;
         };
         suggestions.appendChild(li);
@@ -278,4 +302,3 @@ document.addEventListener('click', function (e) {
         menuButton.classList.remove("active"); // Opsional: hilangkan kelas aktif
     }
 });
-
