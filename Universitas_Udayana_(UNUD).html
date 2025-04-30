@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>UNIVERSITAS UDAYANA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<div class="custom-overlay fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 hidden"></div>
+	<body class="is-preload bg-gray-100">
+
+		<!-- Kotak Search Bar + Tombol Filter (Sticky) -->
+		<div class="sticky top-0 z-50 bg-gray-100 py-4 shadow-md">
+			<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+				<button class="back-button" onclick="goBack()">
+					<span class="back-arrow">Back</span>
+				</button>
+				<script>
+					function goBack() {
+						window.history.back();
+					}
+				</script>
+				<div class="relative w-full">
+					<input 
+						type="text" 
+						id="searchInput" 
+						placeholder="Cari Universitas..." 
+						class="p-3 border rounded w-full shadow"
+						onkeydown="handleSearchKey(event)"
+						onclick="onSearchFocus()"
+					/>
+					<ul id="suggestions" class="univ-suggestions hidden"></ul>
+				</div>
+				<div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+					<button 
+						id="menuBtn" 
+						onclick="toggleMenuDropdown()" 
+						class="border border-red-400 text-red-500 px-4 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-red-100 text-sm sm:text-base"
+					>
+						Menu
+					</button>
+					<ul 
+						id="menuDropdown" 
+						class="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md hidden z-50"
+					>
+						<li><a href="index.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg"><i class="fas fa-home mr-2"></i>Home</a></li>
+						<li><a href="list.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg"><i class="fas fa-university mr-2"></i>Kampus</a></li>
+						<li><a href="alumni.html" class="flex items-center px-4 py-2 hover:bg-blue-100 text-lg"><i class="fas fa-user-graduate mr-2"></i>Alumni</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<!-- Content -->
+					<section>
+						<header class="main">
+							<h1 style="font-size: 72px;">UNIVERSITAS UDAYANA</h1>
+						</header>
+<!-- Tambahkan ini di dalam elemen <section> di bawah paragraf terakhir, sebelum </section> -->
+<hr class="major" />
+<h2 class="text-2xl font-bold mt-8 mb-4">Informasi Universitas</h2>
+<p style="text-align: justify;"><span class="image right"><img src="images/foto/UNUD_image.jpg" alt="" />
+	<li><strong>Link Resmi:</strong> <a href="https://www.unud.ac.id" class="text-blue-600 underline">https://www.unud.ac.id</a></li>
+    <li><strong>Lokasi:</strong> Jl. Raya Kampus UNUD, Bukit Jimbaran, Kuta Selatan, Badung, Bali, Indonesia</li>
+    <li><strong>Akreditasi Institusi:</strong> Terakreditasi A oleh BAN-PT berdasarkan SK No. 2999/SK/BAN-PT/Akred/PT/XII/2016</li>
+	
+</p>
+
+<h2 class="text-2xl font-bold mt-8 mb-4">Jalur Masuk</h2>
+<ol class="list-decimal ml-6 space-y-2 text-justify">
+    <li><strong>SNBP (Seleksi Nasional Berdasarkan Prestasi):</strong> Jalur undangan bagi siswa berprestasi.</li>
+    <li><strong>SNBT (Seleksi Nasional Berdasarkan Tes):</strong> Jalur seleksi berdasarkan ujian nasional.</li>
+    <li><strong>Jalur Mandiri:</strong> Seleksi mandiri melalui UTBK Mandiri dan ujian tulis berbasis komputer. Info lebih lanjut: <a href="https://pmb.unud.ac.id/jadwal-seleksi/" class="text-blue-600 underline">https://pmb.unud.ac.id/jadwal-seleksi/</a></li>
+</ol>
+
+<h2 class="text-2xl font-bold mt-8 mb-4">Fakultas dan Program Studi</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-justify">
+    <div>
+        <h3 class="font-semibold">Fakultas Ekonomi dan Bisnis</h3>
+        <ul class="list-disc ml-5">
+            <li>Akuntansi (A), Manajemen (A), Ekonomi Pembangunan (Unggul)</li>
+            <li>D3: Akuntansi (A), Perpajakan (A), Perpustakaan (B)</li>
+            <li>Magister: Manajemen (A), Akuntansi (A)</li>
+        </ul>
+        <h3 class="font-semibold mt-4">Fakultas Hukum</h3>
+        <ul class="list-disc ml-5"><li>Ilmu Hukum (A)</li></ul>
+
+        <h3 class="font-semibold mt-4">Fakultas Ilmu Sosial dan Ilmu Politik</h3>
+        <ul class="list-disc ml-5">
+            <li>Ilmu Komunikasi, Ilmu Politik, Sosiologi, Administrasi Publik, Hubungan Internasional, D3 Perpustakaan (semua B)</li>
+        </ul>
+    </div>
+    <div>
+		<p style="text-align: justify;"><span class="image right"><img src="images/logo/UNUD_logo.png" alt="" />
+        <h3 class="font-semibold">Fakultas Teknik</h3>
+        <ul class="list-disc ml-5">
+            <li>Teknik Sipil, Mesin, Elektro, Arsitektur (Unggul)</li>
+            <li>Teknik Informatika, Lingkungan, Industri (B)</li>
+        </ul>
+
+        <h3 class="font-semibold mt-4">Fakultas Kedokteran</h3>
+        <ul class="list-disc ml-5"><li>Pendidikan Dokter, Profesi Dokter (Unggul)</li></ul>
+
+        <h3 class="font-semibold mt-4">Fakultas Lainnya</h3>
+        <ul class="list-disc ml-5">
+            <li>Kedokteran Hewan: Pendidikan Dokter Hewan (A)</li>
+            <li>Teknologi Pertanian: Teknik Pertanian dan Biosistem (A), Teknologi Industri Pertanian, Teknologi Pangan (B)</li>
+            <li>Peternakan: Peternakan (A)</li>
+            <li>Pariwisata: Pariwisata, D4 Pariwisata (A)</li>
+            <li>MIPA: Biologi, Farmasi (Unggul), Kimia, Fisika, Matematika, Informatika (B)</li>
+            <li>Ilmu Budaya: Sastra Inggris, Bali, Jepang, Indonesia, Antropologi Budaya, Arkeologi (A)</li>
+            <li>Kelautan dan Perikanan: Ilmu Kelautan (A), Manajemen Sumber Daya Perairan (B)</li>
+        </ul>
+    </div>
+</div>
+
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/browser.min.js"></script>
+		<script src="js/breakpoints.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+		<script src="assets/js/pagination.js"></script>
+		<script src="assets/js/search.js"></script>
+		<script src="assets/js/universitymain.js"></script>
+		<script src="assets/js/menu.js"></script>
+		<script src="assets/js/rekomuniv.js"></script>
+	</body>
+</html>
