@@ -2768,3 +2768,22 @@ html {
   font-weight: 600;
   align-items: center !important; /* Ini yang memastikan tengah */
 }
+
+/*copyright*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Full Width & Warna */
+.custom-footer {
+  background-color: #2c2c2c ; /* warna biru mirip SEVIMA */
+  width: 100%;
+}
